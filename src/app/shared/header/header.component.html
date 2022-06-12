@@ -1,0 +1,43 @@
+<header>
+	<div class="container">
+		<div class="top-area">
+			<div class="brand">
+				<a routerLink="/">
+					<img src="/assets/images/logo.png" alt="">
+				</a>
+			</div>
+			<div class="weather-area">
+				<a class="weatherwidget-io" href="https://forecast7.com/es/39d95n75d17/philadelphia/" data-label_1="Filadelfia" data-label_2="Clima" data-theme="original" >Filadelfia Clima</a>
+			</div>
+		</div>
+		<nav class="navbar navbar-expand-lg navbar-dark">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+						<a class="nav-link" routerLink="/">Inicio</a>
+					</li>
+					<li class="nav-item" routerLinkActive="active">
+						<a class="nav-link" [routerLink]="['/categoria', 'politica']">Política</a>
+					</li>
+					<li class="nav-item" routerLinkActive="active">
+						<a class="nav-link" [routerLink]="['/categoria', 'internacional']">Internacionales</a>
+					</li>
+					<li class="nav-item" routerLinkActive="active">
+						<a class="nav-link" [routerLink]="['/categoria', 'espectaculo']">Espectáculo</a>
+					</li>
+					<li class="nav-item" routerLinkActive="active">
+						<a class="nav-link" routerLink="/nosotros">Nosotros</a>
+					</li>
+					<li class="nav-item" routerLinkActive="active">
+						<a class="nav-link" routerLink="/contacto">Sobre La Clásica</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- Slider -->
+		<!-- <app-slider *ngIf="currentPage == '/'"></app-slider> -->
+	</div>
+</header>

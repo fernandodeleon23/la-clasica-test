@@ -1,0 +1,76 @@
+
+#player{
+    background-color: #191a1e;
+    border-top: 1px solid #2c2e36;
+    position:fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    width:100%;
+}
+#player .container{
+    position: relative;
+}
+#player .player-container{
+    position: relative;
+    display:flex;
+    align-items:center;
+}
+#player .player-container .image-area{
+    width:82px;
+    border:1px solid #212228;
+}
+#player.playing .player-container .image-area img{
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+#player .player-container .buttons{
+    padding: 0px 15px;
+}
+#player .player-container .buttons button{
+    border: 0;
+    background: none;
+    color: #ffe036;
+    font-size: 3em;
+    padding: 16px 18px;
+}
+#player .player-container .buttons button:focus{
+    outline:none;
+}
+#player .player-container .buttons button:hover{
+    color:#cdb42a;
+}
+#player .player-container .play-info h3{
+    font-size: 1.5em;
+}
+#player .player-container .redes-area{
+    position:absolute;
+    right:0;
+}
+#player .player-container .redes-area ul{
+    display:flex;
+    margin-bottom:0;
+}
+#player .player-container .redes-area ul li a{
+    font-size: 1.8em;
+    margin-left:14px;
+}
+#player .player-container .redes-area ul li a svg{
+    width: 24px;
+    position: relative;
+    top: -3px;
+}
+
+@-moz-keyframes spin { 
+    100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}

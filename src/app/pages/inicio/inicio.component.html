@@ -1,0 +1,53 @@
+
+<section class="page-home padding">
+    <div class="container">
+
+        <div class="d-md-flex justify-content-between">
+
+            <div class="entradas">
+
+                <div class="whatsapp-link">
+                    <h5 class="title">Solicita tus caciones a nuestro</h5>
+                    <a href="">
+                        <img src="/assets/images/whatsapp.png" alt="">
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <h3 class="section-title mb-3">Principales noticias</h3>
+
+                <p [hidden]="posts?.length != 0" class="loading">Cargando...</p>
+
+                <div class="posts">
+                    <article *ngFor="let post of posts; let i = index;" class="gray-area">
+                        <div class="date">
+                            <i class="far fa-calendar-minus mr-1"></i> {{ post.post_date }}
+                        </div>
+                        <div class="image-area" *ngIf="post?.featured">
+                            <a [routerLink]="['/articulo', post.slug]">
+                                <img [src]="post.featured" class="img-fluid w-100" [alt]="post.title">
+                            </a>
+                            <!-- <img [src]="post.thumb_722" class="img-fluid w-100 i722" [alt]="post.title">
+                            <img [src]="post.thumb_354" class="img-fluid w-100 i354" [alt]="post.title"> -->
+                        </div>
+                        <div class="container">
+                            <span class="date"><i class="far fa-calendar-minus mr-1"></i> {{ post.date | date : 'medium' }}</span>
+                            <a [routerLink]="['/articulo', post.slug]">
+                                <h3 class="post-title">{{ post.title }}</h3>
+                            </a>
+                            <div class="excerpt">
+                                <p class="pb-0">{{ post.excerpt }}</p>
+                            </div>
+                            <button (click)="article(post.slug)" class="btn btn-secondary read-more mb-3">Ver más</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <!-- Aside -->
+            <div class="aside-container">
+                <app-sidebar></app-sidebar>
+            </div>
+        </div>
+    </div>
+</section>

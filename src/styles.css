@@ -1,0 +1,159 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#191A1E;
+    color:#fff;
+    font-size:15px;
+    padding-bottom:85px;
+    min-height:101vh;
+}
+
+a{
+    color:#fff;
+    transition:color 0.3s;
+}
+a:hover, a:focus, a:active{
+    color:#fbe049;
+    text-decoration:none;
+}
+
+/* ---- WP Class ----- */
+.alignleft{
+    float:left;
+    margin-right:14px;
+}
+
+.padding{
+    padding:30px 0px;
+}
+
+.gray-area{
+    background-color:#2c2e33;
+}
+
+.btn.btn-secondary{
+    background: #d8341f;
+    border-color: #d8341f;
+}
+
+.the-content{
+    font-weight:300;
+    white-space:pre-wrap;
+}
+
+header{
+    padding-top:20px;
+}
+header .top-area{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header .brand span{
+    display:block;
+}
+header .brand a{
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing:10px;
+    text-transform:uppercase;
+}
+header .brand img{
+    width:267px;
+}
+header .weather-area{
+    width:50%;
+}
+header nav{
+    padding:20px 0px !important;
+}
+header nav ul li a{
+    font-size:1.1em;
+    font-weight:500;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+header nav ul li:first-child a{
+    padding-left:0 !important;
+}
+header nav ul li a:hover, header nav ul li.active a{
+    color:#fbe049 !important;
+}
+
+/* ----- WhatsApp Link ----- */
+.whatsapp-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom:60px;
+}
+.whatsapp-link .title{
+    width:100%;
+    margin-bottom:20px;
+}
+.whatsapp-link a{
+    display: flex;
+    align-items: center;
+}
+.whatsapp-link a img{
+    width: 46px;
+}
+.whatsapp-link a span{
+    font-size: 2em;
+    color: #fff;
+    margin-left: 9px;
+}
+
+/* ---- Articulos ---- */
+.page-home .entradas{
+    width:65%;
+}
+.page-home .aside-container{
+    width:33%;
+}
+
+/* ---- Sidebar ---- */
+aside .widget{
+    background: #2c2e33;
+    padding: 15px;
+    margin-bottom:20px;
+}
+aside .widget h3{
+    font-size: 1.3em;
+    margin-bottom: 18px;
+}
+aside .widget img{
+    width:100%;
+    height:auto;
+    max-width:100%;
+}
+
+footer .copyright{
+    font-size:0.85em;
+    padding:20px 0px;
+}
+
+@media screen and (max-width:769px){
+
+    .padding{
+        padding:20px 0px;
+    }
+
+    header .top-area{
+        display:block;
+        text-align:center;
+    }
+    header .top-area .brand{
+        margin-bottom:20px;
+    }
+    header .top-area .brand, header .top-area .weather-area{
+        width:100%;
+    }
+    header nav ul.navbar-nav{
+        margin-top:22px;
+    }
+    .page-home .entradas, .page-home .aside-container{
+        width:100%;
+    }
+}

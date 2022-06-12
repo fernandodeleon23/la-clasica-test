@@ -1,0 +1,43 @@
+
+
+<section class="page-categoria padding">
+    <div class="container">
+
+        <div class="d-md-flex justify-content-between">
+
+            <div class="entradas">
+                <!-- <h3 *ngIf="posts" class="section-title mb-3">{{ posts.cat_title }}</h3> -->
+
+                <!-- <p [hidden]="posts?.length != 0" class="loading">Cargando...</p> -->
+
+                <div class="posts" *ngIf="posts">
+                    <article *ngFor="let post of posts; let i = index;" class="gray-area">
+                        <!-- <div class="date">
+                            <i class="far fa-calendar-minus mr-1"></i> {{ post.date | date : 'medium' }}
+                        </div> -->
+                        <div class="image-area" *ngIf="post?.featured">
+                            <img [src]="post.featured" class="img-fluid w-100" [alt]="post.title">
+                            <!-- <img [src]="post.thumb_722" class="img-fluid w-100 i722" [alt]="post.title">
+                            <img [src]="post.thumb_354" class="img-fluid w-100 i354" [alt]="post.title"> -->
+                        </div>
+                        <div class="container">
+                            <span class="date"><i class="far fa-calendar-minus mr-1"></i> {{ post.date | date : 'medium' }}</span>
+                            <a [routerLink]="['/articulo', post.slug]">
+                                <h3 class="post-title">{{ post.title }}</h3>
+                            </a>
+                            <div class="excerpt">
+                                <p class="pb-0">{{ post.post_excerpt }}</p>
+                            </div>
+                            <button (click)="article(post.slug)" class="btn btn-secondary read-more mb-3">Ver más</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            
+            <!-- Aside -->
+            <div class="aside-container">
+                <app-sidebar></app-sidebar>
+            </div>
+        </div>
+    </div>
+</section>
